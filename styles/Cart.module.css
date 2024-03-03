@@ -1,0 +1,304 @@
+.container {
+  padding: 50px;
+  display: flex;
+  gap: 2rem;
+  height: 100%;
+}
+
+.left {
+  flex: 0.65;
+}
+
+.right {
+  flex: 0.35;
+}
+
+.cartHeading {
+  font-size: 2rem;
+  color: rgb(80, 79, 79);
+}
+.imgContainer {
+  width: 80%;
+  height: 80%;
+}
+
+.table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.trTitle {
+  background-color: #f3f3f3;
+  font-size: 1.6rem;
+  color: rgb(77, 77, 77);
+}
+
+.trTitle th:nth-child(2) {
+  width: 180px;
+}
+
+.trTitle th:nth-child(5) {
+  width: 130px;
+}
+
+.tr {
+  text-align: center;
+}
+
+.name {
+  font-weight: 500;
+  color: #d1411e;
+  font-size: 1.4rem;
+}
+
+.price,
+.discount {
+  font-size: 1.5rem;
+}
+
+.quantity {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.qtyIcon {
+  /* height: 25% !important;
+  width: 25% !important; */
+}
+.qtyIcon,
+.trashIcon {
+  color: #999;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.qtyIcon:hover,
+.trashIcon:hover {
+  color: #d1411e;
+}
+
+.qtyNum {
+  font-size: 1.3rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #333;
+  margin: 0 0.7rem;
+}
+
+.total {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.wrapper {
+  width: 90%;
+  background-color: rgb(66, 66, 66);
+  padding: 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.wrapper div {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  height: 4rem;
+  color: #d1411e;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 2rem;
+}
+
+.noItem {
+  font-size: 2.5rem;
+  width: 50vw;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+  color: #d1411e;
+}
+.noSummary > div {
+  display: none;
+}
+
+.noSummary button {
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .right {
+    align-self: center;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .left {
+    width: 100%;
+  }
+
+  .right {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 815px) {
+  .trTitle th:nth-child(4) {
+    display: none;
+  }
+
+  .right {
+    width: 65%;
+  }
+  .tr td:nth-child(4) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .trTitle th:nth-child(2) {
+    width: 140px;
+  }
+
+  .right {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 448px) {
+  .right {
+    width: 100vw;
+  }
+
+  .qtyIcon {
+    height: 9% !important;
+    width: 9% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .trTitle {
+    display: none;
+  }
+
+  .trTitle th:nth-child(4) {
+    display: flex;
+  }
+
+  .tr td:nth-child(4) {
+    display: flex;
+  }
+
+  .tr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #999;
+  }
+  .quantity {
+    align-items: center;
+    justify-content: center;
+    margin-top: -0.7rem;
+  }
+
+  .qtyNum {
+    font-size: 1.5rem;
+    padding: 0.8rem 2rem;
+  }
+
+  .qtyIcon {
+    height: 5%;
+    width: 5%;
+  }
+  .qtyIcon:first-child {
+    margin-left: 1rem;
+  }
+
+  .imgContainer {
+    width: 30%;
+    height: 30%;
+    margin: 0 auto;
+  }
+
+  .name,
+  .total {
+    font-size: 20px;
+  }
+
+  .price,
+  .quantity,
+  .discount {
+    font-size: 18px;
+  }
+
+  .discount {
+    margin-left: -9rem;
+  }
+  .price {
+    margin-left: -3rem;
+  }
+
+  .price::before {
+    content: "Price: ";
+    font-weight: 500;
+    margin-right: 8rem;
+  }
+
+  .discount::before {
+    content: "Discount(%): ";
+    font-weight: 500;
+    margin-right: 6rem;
+  }
+
+  .quantity::before {
+    content: "Quantity: ";
+    font-weight: 500;
+    margin-right: 4rem;
+    margin-left: -2rem;
+  }
+  .total::before {
+    content: "Total: ";
+    font-weight: 500;
+    margin-right: 8rem;
+    margin-left: -2rem;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .container {
+    padding: 1rem;
+  }
+  .wrapper {
+    padding: 1rem;
+  }
+  .left {
+    width: 100%;
+  }
+}

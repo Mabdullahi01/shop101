@@ -1,0 +1,135 @@
+.container {
+  overflow: hidden;
+  position: relative;
+  margin-top: -4.3rem;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  transition: all 1.5s ease-in-out;
+}
+
+.innerWrapper {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+}
+
+.left {
+  flex: 0.5;
+}
+.content {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.6rem;
+  line-height: 3.5rem;
+  margin-bottom: 0;
+}
+
+.desc {
+  line-height: 3rem;
+  font-size: 1.6rem;
+}
+.price {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.buyBtn {
+  font-size: 1.8rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 2rem 6rem;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+}
+
+.right {
+  flex: 0.5;
+}
+
+.imgContainer {
+  height: 100%;
+  align-self: center;
+}
+
+.arrowContainer {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+  z-index: 2;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    margin-left: -3rem;
+  }
+  .innerWrapper {
+    flex-direction: column;
+  }
+
+  .imgContainer {
+    height: 65%;
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+  }
+
+  .content {
+    width: 50%;
+    text-align: center;
+  }
+
+  .arrowContainer {
+    bottom: -25rem;
+  }
+  .desc {
+    line-height: 2.8rem;
+  }
+
+  .price {
+    margin-top: -0.87rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .desc {
+    display: none;
+  }
+
+  .price {
+    margin-top: 2.5rem;
+    font-size: 1.4rem;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+  .buyBtn {
+    font-size: 1.4rem;
+    padding: 1.5rem 4rem;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .content{
+    width: 80%;
+  }
+}
