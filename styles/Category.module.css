@@ -1,0 +1,144 @@
+.categories {
+  height: 100%;
+  position: relative;
+}
+
+.browseBtn {
+  font-size: 1.6rem;
+  outline: none;
+  cursor: pointer;
+  padding: 2rem 3.5rem;
+  border: 2.5px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  margin: 3rem auto;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.browseBtn:hover {
+  background-color: rgb(231, 231, 231);
+}
+
+.wrapper {
+  padding: 1.6rem 6rem;
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 350px);
+  gap: 1.5rem;
+}
+.catCard {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+.catCard > span {
+  transition: all 0.8s ease-in-out;
+  position: absolute;
+  z-index: 10;
+}
+
+.catCard:hover > span {
+  transform: scale(1.2);
+}
+
+.catCard::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.2;
+  z-index: 13;
+}
+
+.title {
+  position: absolute;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  width: fit-content;
+  border-radius: 5px;
+  color: white;
+  font-size: 3rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper div:nth-child(1) {
+  grid-row: 1/2;
+}
+.wrapper div:nth-child(2) {
+  grid-row: 1/2;
+}
+
+.wrapper div:nth-child(3) {
+  grid-row: 2/-1;
+}
+.wrapper div:nth-child(4) {
+  grid-row: 2/-1;
+}
+
+@media screen and (max-width: 1200px) {
+  .title {
+    width: 60%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .wrapper{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 350px);
+  }
+
+  .wrapper div:nth-child(1) {
+    grid-row: 1/2;
+  }
+  .wrapper div:nth-child(2) {
+    grid-row: 2/3;
+  }
+  
+  .wrapper div:nth-child(3) {
+    grid-row: 3/4;
+  }
+  .wrapper div:nth-child(4) {
+    grid-row: 4/-1;
+  }
+}
+
+
+@media screen and (max-width: 663px){
+
+  .wrapper{
+    grid-template-columns: 95vw;
+    margin-left: -7.5rem;
+  }
+}
+
+
+@media screen and (max-width: 428px){
+
+  .wrapper{
+    grid-template-columns: 95vw;
+    grid-template-rows: repeat(4, 250px);
+    margin-left: -8rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+
+  .browseBtn{
+    font-size: 1.2rem;
+    padding: 1.3rem 2.5rem;
+  }
+}

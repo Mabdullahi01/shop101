@@ -1,0 +1,57 @@
+.container{
+    height: 8rem;
+    width: 100%;
+}
+
+.wrapper{
+    padding: 0.5rem 3rem;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper > div:nth-child(2){
+    font-size: 1.8rem;
+}
+
+.icon{
+    height: 2.5rem;
+    width: 2.5rem;
+    padding: .7rem;
+    background-color: white;
+    border: 1.5px solid var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+
+@media screen and (max-width: 428px) {
+
+   .container{
+       height: 5rem;
+   }
+    .wrapper > div:nth-child(1){
+        display: none;
+    }
+    .wrapper > div:nth-child(2){
+        margin-right: 2rem;
+        font-size: 1.5rem;
+    }
+    .icon{
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
+@media screen and (max-width: 332px) {
+    .wrapper > div:nth-child(2){
+        margin-right: 2rem;
+        font-size: 1.2rem;
+    }
+    .icon{
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}

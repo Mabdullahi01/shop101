@@ -1,0 +1,310 @@
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.backArr {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  color: var(--primary-color);
+  font-weight: bold;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.backArr p {
+  font-size: 1.8rem;
+  color: rgb(110, 110, 110);
+  font-weight: 600;
+}
+
+.backArr span {
+  background-color: rgb(206, 206, 206);
+  height: 2rem;
+  margin: 0 1rem;
+}
+
+.wrapper {
+  height: 80%;
+  width: 80%;
+  padding: 4rem;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  /* border: 2px solid rgb(207, 206, 206); */
+  gap: 3rem;
+}
+
+.left {
+  flex: 0.45;
+  align-self: center;
+}
+.imageContainer {
+  height: 35%;
+  width: 35%;
+}
+
+.right {
+  flex: 0.55;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.right h2 {
+  font-size: 3rem;
+  color: rgb(110, 110, 110);
+}
+
+.priceContainer {
+  margin-top: -2rem;
+  display: flex;
+}
+.discPrice {
+  text-decoration: line-through;
+  color: #b3b1b1;
+  font-size: 2.2rem;
+  display: flex;
+}
+
+.discArr {
+  align-self: center;
+  margin-left: 2rem;
+  font-size: 1.6rem;
+  color: green;
+  font-weight: 700;
+}
+
+.discArr span + * {
+  margin-left: 0.5rem;
+}
+
+.currPrice {
+  color: green !important;
+  margin-top: -0.2rem;
+}
+
+.right hr {
+  width: 100%;
+}
+
+.desc {
+  font-size: 1.9rem;
+  color: rgb(110, 110, 110);
+}
+
+.freeDelivery {
+  color: rgb(78, 78, 78);
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+.freeDelivery span {
+  margin-left: 1rem;
+}
+
+.ctaBtn {
+  display: flex;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.ctaBtn > * {
+  font-size: 1.8rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 2rem 6rem;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+}
+
+.ctaBtn button:first-child {
+  background-color: #b3b1b1;
+  margin-right: 1.5rem;
+}
+
+/* //======================MODAL RELATED CSS ==============// */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+}
+
+.modal {
+  position: relative;
+  top: 50%;
+  left: 30%;
+  width: 65%;
+  height: 40%;
+  border-radius: 10px;
+  transform: translate(-30%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  padding: 6rem;
+  z-index: 9999;
+}
+
+.modalImg {
+  display: flex;
+  width: 100%;
+}
+
+.modalTitle {
+  margin-left: 2rem;
+}
+
+.modalTitle h3 {
+  font-size: 1.8rem;
+  width: 80%;
+}
+
+.modalTitle span {
+  color: green;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.btn > * {
+  font-size: 1.6rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+  padding: 2rem;
+}
+
+.btn button:first-child {
+  background-color: white;
+  border: 1px solid var(--primary-color);
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #e2e2e2;
+  color: #505050;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1090px) {
+  .modalImg {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .modalImg .objectContainer {
+    align-self: center;
+    width: 30%;
+    height: 30%;
+  }
+
+  .modalImg .modalTitle {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .modal {
+    flex-direction: column;
+    height: auto;
+  }
+  .modalImg {
+    margin-left: 6.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .modal {
+    display: none;
+  }
+  .overlay {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1138px) {
+  .ctaBtn button:first-child {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 931px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .ctaBtn button:first-child {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .ctaBtn button:first-child {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ctaBtn button:last-child {
+    width: 100%;
+  }
+  .backArr p {
+    font-size: 1.4rem;
+  }
+
+  .right h2 {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .wrapper {
+    width: 100%;
+  }
+  .desc {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .ctaBtn button:last-child > .cartIcon {
+    display: none;
+  }
+}

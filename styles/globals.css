@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap");
+
+html,
+body {
+  padding:0;
+  margin: 0;
+  position: relative;
+
+}
+
+
+html {
+  font-size: 62.5%;
+
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--secondary-color);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 50px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --primary-color: #8d69b7;
+  --primary-color2: #e01759;
+  --hover-color: #F8FAFC;
+  --secondary-color: #575757;
+  --text-color: #222222;
+  --tertiary-color: #747474;
+  --box-shadow: 1px -3px 24px -15px rgba(0, 0, 0, 0.75);
+  --border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+
+@media screen and (max-width: 370px) {
+  html{
+    font-size: 52%;
+  }
+
+}
