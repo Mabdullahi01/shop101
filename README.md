@@ -50,7 +50,7 @@ export const JustAnotherProject = () => {
 ## Author
 
 - LinkedIn - [Let's connect 🔗](http://www.linkedin.com/in/abdullahi-mohammed1)
-- Website - [Here](https://Mabdullahi01.github.io/)
+
 
 
 #### Acknowledgement
